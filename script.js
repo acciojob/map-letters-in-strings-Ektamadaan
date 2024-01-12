@@ -16,7 +16,8 @@ function mapLetters(word) {
     return letterMap;
 }
 
-const str1 = rompt("E")
+//const str1 = prompt("Enter String:")
+alert(mapLetters(str1));
 
 
 
