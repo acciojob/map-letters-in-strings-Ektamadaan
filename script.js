@@ -19,7 +19,7 @@ function mapLetters(word) {
     return result;
 }
 
-//const str1 = prompt("Enter String:")
+const str1 = prompt("Enter String:")
 alert(mapLetters(str1));
 
 
