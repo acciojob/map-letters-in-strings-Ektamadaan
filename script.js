@@ -1,22 +1,13 @@
 //your JS code here. If required.
 function mapLetters(word) {
-   const result = {};
-
-    for (let i = 0; i < word.length; i++) {
-        const letter = word[i];
-
+    return [...word].reduce((result, letter, index) => {
         const key = Symbol.for(letter);
 
-        if (result[key]) {
-            
-            result[key].push(i);
-        } else {
-            
-            result[key] = [i];
-        }
-    }
+        // If the key exists, push the index to the existing array; otherwise, create a new array
+        result[key] = result[key] ? [...result[key], index] : [index];
 
-    return result;
+        return result;
+    }, {});
 }
 
 const str1 = prompt("Enter String:")
